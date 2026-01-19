@@ -2,6 +2,7 @@ package Week1.Problems;
 
 import java.util.Scanner;
 
+// Question Number: 204
 // Question: https://leetcode.com/problems/count-primes/description/
 // My Sollution: https://leetcode.com/problems/count-primes/submissions/1890152780/
 
