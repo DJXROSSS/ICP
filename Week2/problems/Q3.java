@@ -1,13 +1,14 @@
 package Week2.problems;
 import java.util.Scanner;
+import java.util.Stack;
 
 // Question: https://leetcode.com/problems/sum-of-subarray-minimums/description/
-// My Sollution: 
+// My Sollution: https://leetcode.com/submissions/detail/1891500840/
 
-//My Approach: 
+//My Approach: We use a monotonic stack to keep track of the minimun of sub array, and use two pointers i and j to controll the subarray.
 //
 
-// TC: O()
+// TC: O(n*k)
 
 public class Q3 {
     public static void main(String[] args) {
@@ -21,14 +22,31 @@ public class Q3 {
     }
 
     public static int sumSubarrayMins(int[] arr) {
-        int n = arr.length;
-        int sum = 0;
-        for(int i = 0; i < n; i++){
-            for(int j = i; j < n; j++){
-                System.out.print(arr[j]);
+        int len = arr.length;
+        long sum = 0;
+        Stack<Integer> stack = new Stack<>();
+        int j, k;
+        for (int i = 0; i <= len; i++) {
+            while (!stack.isEmpty() && arr[stack.peek()] > (i == len ? Integer.MIN_VALUE : arr[i])) {
+                j = stack.pop();
+                k = stack.isEmpty() ? -1 : stack.peek();
+                sum += (long)arr[j] * (i - j) * (j - k);
             }
-            System.out.println();
+            stack.push(i);
         }
-        return 0;
+        return (int)(sum % (long) (1e9 + 7));
     }
+
+    // public static int sumSubarrayMins(int[] arr) {
+    //     int n = arr.length;
+    //     long sum = 0;
+    //     for (int i = 0; i < n; i++) {
+    //         int min = arr[i];
+    //         for (int j = i; j < n; j++) {
+    //             min = Math.min(min, arr[j]);
+    //         }
+    //         sum += min;
+    //     }
+    //     return (int) (sum  % 1_000_000_007);
+    // }
 }
