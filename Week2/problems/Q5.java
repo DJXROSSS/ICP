@@ -3,7 +3,7 @@ package Week2.problems;
 import java.util.Scanner;
 
 // Question: https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/description/
-// My Sollution: 
+// My Sollution: https://leetcode.com/problems/minimum-number-of-increments-on-subarrays-to-form-a-target-array/submissions/1891785227/
 
 //My Approach: 
 //

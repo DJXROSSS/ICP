@@ -4,10 +4,8 @@ import java.util.Scanner;
 import java.util.Stack;
 
 // Question: https://leetcode.com/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/description/
-// My Sollution: 
+// My Sollution: https://leetcode.com/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/submissions/1891866783/
 
-//My Approach: 
-//
 
 // TC: O()
 

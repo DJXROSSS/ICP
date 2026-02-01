@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 // Question: https://leetcode.com/problems/maximum-subarray-min-product/description/
-// My Sollution: 
+// My Sollution: https://leetcode.com/problems/maximum-subarray-min-product/submissions/1891779897/
 
 //My Approach: 
 //
