@@ -41,7 +41,7 @@ public class Q3 {
                 } else if(sum < 0){
                     j++;
                 } else {
-                    ans.add(new ArrayList(Arrays.asList(nums[i],nums[j],nums[k])));
+                    ans.add(new ArrayList<>(Arrays.asList(nums[i],nums[j],nums[k])));
                     j++;
                     k--;
                     while(j < k && nums[j] == nums[j-1]){
