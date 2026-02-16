@@ -1,4 +1,4 @@
-package Week4;
+package Week4.problems;
 
 // Question: https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/description/
 // My Sollution: https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/submissions/1905073303/

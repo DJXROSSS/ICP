@@ -1,4 +1,4 @@
-package Week4;
+package Week4.problems;
 
 // Question: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/
 // My Sollution: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/submissions/1905118438/
@@ -8,7 +8,7 @@ package Week4;
 
 import java.util.Scanner;
 
-public class Q2 {
+public class Q3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

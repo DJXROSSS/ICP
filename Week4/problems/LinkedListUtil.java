@@ -1,4 +1,4 @@
-package Week4;
+package Week4.problems;
 
 class LinkedListUtil {
 

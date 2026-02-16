@@ -1,4 +1,4 @@
-package Week4;
+package Week4.problems;
 
 public class ListNode {
     public int val;
