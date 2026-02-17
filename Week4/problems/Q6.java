@@ -1,9 +1,11 @@
 package Week4.problems;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-// Question: https://leetcode.com/problems/steps-to-make-array-non-decreasing/description/
-// My Sollution: https://leetcode.com/problems/steps-to-make-array-non-decreasing/submissions/1909964082/
+// Question: https://leetcode.com/problems/next-greater-node-in-linked-list/description/
+// My Sollution: https://leetcode.com/problems/next-greater-node-in-linked-list/submissions/1921479982/
 
 // TC: O(N)
 
@@ -16,16 +18,22 @@ public class Q6 {
         for(int i = 0; i <n ; i++) arr[i] = sc.nextInt();
     }
 
-    public static int totalSteps(int[] A) {
-        int n = A.length, res = 0, j = -1;
-        int dp[] = new int[n], stack[] = new int[n];
-        for (int i = n - 1; i >= 0; --i) {
-            while (j >= 0 && A[i] > A[stack[j]]) {
-                dp[i] = Math.max(++dp[i], dp[stack[j--]]);
-                res = Math.max(res, dp[i]);
-            }
-            stack[++j] = i;
+    public static int[] nextLargerNodes(ListNode head) {
+        List<Integer> arr = new ArrayList<>();
+        while(head != null){
+            arr.add(head.val);
+            head = head.next;
         }
-        return res;
+        int n = arr.size();
+        int[] ans = new int[n];
+        for(int i = 0; i < n-1; i++){
+            for(int j = i+1; j < n; j++){
+                if(arr.get(j) > arr.get(i)){
+                    ans[i] = arr.get(j);
+                    break;
+                }
+            }
+        }
+        return ans;
     }
 }
